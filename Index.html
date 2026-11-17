@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffc1dc">
+<title>For Manshi 💗</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Trebuchet MS',sans-serif;background:linear-gradient(135deg,#ffe0ef,#ffc1dc,#fff0f7);color:#a83268;text-align:center;overflow-x:hidden;min-height:100vh}
+section{padding:65px 18px;position:relative}
+h1{font-size:clamp(35px,8vw,65px);text-shadow:3px 4px 0 #ffafd0}
+h2{font-size:30px;margin-bottom:20px}
+p{line-height:1.7}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.hero p{font-size:18px;margin:20px}
+.crown{font-size:65px;animation:float 2s infinite ease-in-out}
+button{border:none;background:#ff5fa2;color:white;padding:14px 27px;border-radius:30px;font-size:16px;cursor:pointer;margin-top:20px;box-shadow:0 7px 0 #c83c79;transition:.3s}
+button:hover{transform:translateY(-5px) scale(1.05)}
+.card{background:rgba(255,255,255,.68);backdrop-filter:blur(12px);border:2px solid white;border-radius:25px;padding:28px 20px;max-width:600px;margin:20px auto;box-shadow:0 15px 35px #d95b9250;transition:.4s}
+.card:hover{transform:perspective(800px) rotateX(3deg) rotateY(-3deg) translateY(-5px)}
+.countdown{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.time{background:#fff;padding:18px 12px;border-radius:17px;min-width:75px;box-shadow:0 7px 15px #c94e8640}
+.time strong{font-size:27px;display:block}
+.time span{font-size:12px}
+.cake{font-size:100px;animation:float 2s infinite ease-in-out;filter:drop-shadow(0 12px 8px #c45b8b55)}
+.letter{text-align:left;line-height:2;font-size:16px}
+.letter h2{text-align:center}
+#surprise{display:none;font-size:23px;padding:25px;animation:pop .6s ease}
+.heart{position:fixed;bottom:-30px;pointer-events:none;animation:rise 7s linear forwards;z-index:5}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-15px) rotate(3deg)}}
+@keyframes rise{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@keyframes pop{from{transform:scale(.5);opacity:0}to{transform:scale(1);opacity:1}}
+footer{padding:30px}
+@media(max-width:420px){section{padding:52px 14px}.card{padding:23px 16px}.time{min-width:68px}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="crown">👑</div>
+  <h1>Hey Manshi!</h1>
+  <p>Attention please! The Head Girl has a special surprise waiting... 💗</p>
+  <p>Officially approved by the Department of Secret Admirers. 🤫</p>
+  <button onclick="document.getElementById('count').scrollIntoView({behavior:'smooth'})">Open Your Surprise 💌</button>
+</section>
+
+<section id="count">
+  <h2>🎀 Birthday Countdown 🎀</h2>
+  <div class="card">
+    <p>Waiting for the queen's special day!</p>
+    <h2>23 January 2027</h2>
+    <div class="countdown">
+      <div class="time"><strong id="days">00</strong><span>Days</span></div>
+      <div class="time"><strong id="hours">00</strong><span>Hours</span></div>
+      <div class="time"><strong id="mins">00</strong><span>Minutes</span></div>
+      <div class="time"><strong id="secs">00</strong><span>Seconds</span></div>
+    </div>
+    <p id="countText" style="margin-top:20px"></p>
+  </div>
+</section>
+
+<div id="birthdayContent" style="display:none">
+<section>
+  <h2>A Cake For Our Head Girl 🎂</h2>
+  <div class="card">
+    <div class="cake">🎂</div>
+    <h2>Queen Manshi 👑</h2>
+    <p>May your birthday be as sweet as cake and your school announcements be slightly less scary! 😂</p>
+  </div>
+</section>
+
+<section>
+  <h2>💌 A Little Letter For You</h2>
+  <div class="card letter">
+    <h2>Dear Manshi (Our Head Girl 👑),</h2>
+    <p>First of all, Happy Birthday in advance! 🎂💗</p>
+    <p>So, how does it feel to be the Head Girl? Do you get a special VIP entry everywhere, or do you still have to follow the school rules? 😂</p>
+    <p>Jokes apart, you're genuinely a wonderful person. Your confidence, your smile and your personality make you someone worth appreciating.</p>
+    <p>I hope your life is always filled with happiness, success, chocolates, crazy memories and absolutely ZERO homework! 😂</p>
+    <p>Never stop smiling, keep shining and don't let that Head Girl attitude become permanent. We still need the fun Manshi! 🤣</p>
+    <p>And remember, today you're allowed to be a little extra dramatic. It's your birthday, after all! 🎀</p>
+    <p><strong>Happy Birthday, Queen Manshi! 👑💗</strong></p>
+    <p>Stay amazing, stay happy!</p>
+    <p style="text-align:right"><em>— Someone who wishes you more happiness than you can imagine. 🤫</em></p>
+  </div>
+</section>
+
+<section>
+  <h2>One Last Surprise! 🎁</h2>
+  <div class="card">
+    <p>Okay Head Girl, your final task is to click below!</p>
+    <button onclick="showSurprise()">Unlock Your Surprise 💗</button>
+    <div id="surprise">Happy Birthday, Manshi! 🎉💗<br>Stay happy, stay amazing and never stop shining! 👑</div>
+  </div>
+</section>
+
+</div>
+
+<section id="lockedMessage" style="display:block">
+  <div class="card">
+    <div style="font-size:54px">🔒🎁</div>
+    <h2>Your surprise is locked!</h2>
+    <p>Oops! Too early, Head Girl! 😂</p>
+    <p>Your birthday surprise will unlock automatically on 23 January 2027. Come back then! 💗</p>
+  </div>
+</section>
+
+<footer>Made with 💗 and a little bit of craziness.<br>Specially for Manshi 👑</footer>
+
+<script>
+const birthday = new Date(2027, 0, 23, 0, 0, 0).getTime();
+function updateCountdown(){
+  const diff=birthday-Date.now();
+  if(diff<=0){
+    ['days','hours','mins','secs'].forEach(id=>document.getElementById(id).textContent='00');
+    document.getElementById('countText').textContent="IT'S HER BIRTHDAY! HAPPY BIRTHDAY MANSHI! 🎉";
+    document.getElementById('birthdayContent').style.display='block';
+    document.getElementById('lockedMessage').style.display='none';
+    document.getElementById('birthdayContent').scrollIntoView({behavior:'smooth'});
+    return;
+  }
+  document.getElementById('days').textContent=Math.floor(diff/86400000);
+  document.getElementById('hours').textContent=Math.floor(diff/3600000)%24;
+  document.getElementById('mins').textContent=Math.floor(diff/60000)%60;
+  document.getElementById('secs').textContent=Math.floor(diff/1000)%60;
+}
+setInterval(updateCountdown,1000);updateCountdown();
+function showSurprise(){document.getElementById('surprise').style.display='block'}
+function createHeart(){
+  const heart=document.createElement('div');heart.className='heart';
+  heart.textContent=['💗','💕','💖','✨','🎀'][Math.floor(Math.random()*5)];
+  heart.style.left=Math.random()*100+'vw';
+  heart.style.fontSize=(15+Math.random()*22)+'px';
+  heart.style.animationDuration=(4+Math.random()*5)+'s';
+  document.body.appendChild(heart);setTimeout(()=>heart.remove(),9000);
+}
+setInterval(createHeart,500);
+</script>
+</body>
+</html>
